@@ -1,22 +1,81 @@
 gun-wall.png
 https://www.gallowtech.com/package-pkg-h-41-04-2.aspx
-
+===================================================================================================================================================================================================
 usa/m1garand/profile.png
-https://shootinjh.com/m1-garand-jackson-hole/
+https://guns.fandom.com/wiki/M1_Garand?file=M1Garand.jpg
+
+usa/m1903springfield/profile.png
+https://guns.fandom.com/wiki/M1903_Springfield?file=M1903+Springfield.jpg
 
 usa/thompson/profile.png
-https://www.kindpng.com/imgv/hJxxRwi_thompson-gun-png-download-tommy-gun-transparent-background/
+https://guns.fandom.com/wiki/Thompson_submachine_gun?file=M1921Thompson.png
+
+usa/bar/profile.png
+https://guns.fandom.com/wiki/Browning_Automatic_Rifle?file=M1918A2BAR.jpg
 
 usa/m1911/profile.png
-https://battlefield.fandom.com/de/wiki/M1911?file=BFBC2_M1911_ICON.png
+https://guns.fandom.com/wiki/M1911_pistol?file=M1911A1.jpg
 
+==============================================================================================================================================================================================================================================================================
+ussr/mosinnagant/profile.png
+https://www.google.com.hk/search?q=mosin+nagant+png&tbm=isch&ved=2ahUKEwjokaWY2orxAhUbPCsKHU51BXIQ2-cCegQIABAA&oq=mosin+nagant+png&gs_lcp=CgNpbWcQAzIGCAAQBxAeMgYIABAHEB5QjrYYWIXDGGCdxBhoAHAAeAGAAeADiAHIFZIBCDItMTAuMC4xmAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=esjAYOjsBpv4rAHO6pWQBw&bih=726&biw=1291&safe=strict&hl=en#imgrc=0t1Oa9mUkd3V_M&imgdii=mLbY_es24zVJSM
+or
+https://www.pngegg.com/en/png-itxga
 
+ussr/svt40/profile.png
+https://guns.fandom.com/wiki/SVT-40?file=SVT-40.png
 
+ussr/ppsh41/profile.png
+https://guns.fandom.com/wiki/PPSh-41?file=PPSh-41.png
+
+ussr/dp28/profile.png
+https://military-conflict-vietnam.fandom.com/wiki/DP-28?file=Dp28.png
+
+=======================================================================================================================================
+germany/kar98k/profile.png
+https://lootshare.io/kar98k/33a554ff-9151-4926-b077-b8347ffd0bb9$
+
+germany/sturmgewehr44/profile.png
+https://guns.fandom.com/wiki/StG_44?file=StG_44.jpg
+
+germany/gewehr43/profile.png
+https://www.pikpng.com/transpng/iwomhm/
+
+germany/mp40/profile.png
+https://guns.fandom.com/wiki/MP_40?file=MP_40.png
+
+germany/mg42/profile.png
+https://guns.fandom.com/wiki/MG_42?file=MG_42.png
+
+germany/luger08/profile.png
+https://guns.fandom.com/wiki/Luger_pistol
+======================================================================================================================================================
 uk/leeenfield/profile.png
-http://www.ltwerner.com/wwii/wwii-leeenfield.phtml
+https://guns.fandom.com/wiki/Lee-Enfield?file=Lee-Enfield.png
 
 uk/bren/profile.png
 https://www.pngfind.com/mpng/hxxooww_bren-lmg-british-bren-gun-hd-png-download/
 
 uk/sten/profile.png
-https://upload.wikimedia.org/wikipedia/commons/a/a2/STEN_MK_II_submachinegun.png
+https://guns.fandom.com/wiki/Sten?file=STEN.jpg
+
+======================================================================================================================================================
+japan/type38/profile.png
+https://battlefield.fandom.com/wiki/Type_38_Arisaka?file=Arisaka_Type_38.jpg
+
+japan/type92/profile.png
+https://guns.fandom.com/wiki/Type_92_machine_gun?file=Type92MMG.png
+
+japan/type96/profile.png
+https://guns.fandom.com/wiki/Type_96_light_machine_gun?file=Type_96.png
+
+
+
+
+
+
+
+
+
+
+

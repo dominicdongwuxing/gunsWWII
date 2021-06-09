@@ -9,8 +9,8 @@ export default class extends abstractView {
         this.setTitle("USA Guns");
         // put gun names here
         let guns = {
-            rifles: ['m1garand'], 
-            machineGuns: ['thompson'], 
+            rifles: ['m1garand','m1903springfield'], 
+            machineGuns: ['thompson','bar'], 
             sideArms: ['m1911']
         }
 
