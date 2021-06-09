@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Guns of WWII</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <a href="/" class="navlink-all-pages" data-link>Famous Guns Of World War II</a>
+        <!-- this is the bav bar for home page or country page -->
+        <nav class="home country" id="navbar-home-country">
+            <ul>
+                <li><a href="/usa" class="navlink" data-link><img class="usa-flag" src="images/usa/usa.png" data-link>USA</a></li>
+                <li><a href="/ussr" class="navlink" data-link><img class="ussr-flag" src="images/ussr/ussr.png" data-link>Soviet
+                        Union</a></li>
+                <li><a href="/germany" class="navlink" data-link><img class="germany-flag"
+                            src="images/germany/germany.png" data-link>Nazi Germany</a></li>
+                <li><a href="/uk" class="navlink" data-link><img class="uk-flag" src="images/uk/uk.png" data-link>UK</a></li>
+                <li><a href="/japan" class="navlink" data-link><img class="japan-flag"
+                            src="images/japan/japan.png">Japan</a></li>
+            </ul>
+        </nav>
+        <!-- this is the nav bar for an individual gun page -->
+        <nav class="gun" id="navbar-gun">
+            <ul>
+                <li></li>
+                <li><a href="" class="navlink" data-link>History</a></li>
+                <li><a href="" class="navlink" data-link>Specifications</a></li>
+                <li><a href="" class="navlink" data-link>Performance</a></li>
+                <li><a href="" class="navlink" data-link>See also</a></li>
+                <li><a href="" class="navlink" data-link>References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content">
+        <div id="intro"></div>
+        <!-- this section is for homepage -->
+        <div class="home" id="home-content">
+            <div id="slide-box">
+                <div id="frame"></div>
+                <div class="btns">
+                    <button id="btn-prev">Previous</button>
+                    <button id="btn-random">Random</button>
+                    <button id="btn-next">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- this section is for country page -->
+        <div class="country" id="country-content">
+            <div id="shelf-area">
+                <div id="gun-type-btns">
+                    <button id="btn-rifles">Rifles</button>
+                    <button id="btn-machineGuns">Machine guns</button>
+                    <button id="btn-sideArms">Side arms</button>
+                    <button id="btn-all">All</button>
+                </div>
+            <div id="shelf"></div>
+        </div>
+    
+
+        <!-- this section is for individual gun page -->
+        <div class="gun" id="gun-content">
+            <div id="details">
+                <div id="history"></div>
+                <div id="specifications"></div>
+                <div id="performance"></div>
+                <div id="see-also"></div>
+                <div id="references"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="js/index.js"></script>
+</body>
+
+</html>

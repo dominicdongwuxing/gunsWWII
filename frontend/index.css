@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 2vw;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.usa-flag, .uk-flag, .ussr-flag, .germany-flag, .japan-flag {
+  width: 1.5vw;
+  height: 1.5vw;
+  object-fit: cover;
+}
+
+.usa-flag, .ussr-flag {
+  object-position: 10% 0;
+}
+
+#shelf {
+  background-image: url('images/gun-wall.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 500px;
+  height: 300px;
+}
+
+.gun-on-shelf {
+  width: auto;
+  height: 40px;
+}
+
+
+
+
