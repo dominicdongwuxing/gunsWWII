@@ -2,29 +2,137 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 2vw;
+  font-size: 15pt;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
 }
+
+button {
+  background: none;
+  border: none;
+}
+
+/*
+========================
+nav bar
+========================
+*/
 
 header {
-  display: flex;
-  justify-content: space-around;
+  background-color: black;
 }
 
-ul {
-  list-style-type: none;
-  display: flex;
+.navlink {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem;
 }
 
-.usa-flag, .uk-flag, .ussr-flag, .germany-flag, .japan-flag {
-  width: 1.5vw;
-  height: 1.5vw;
+.navlink:hover {
+  color: black;
+  background-color: white;
+}
+
+.navlink:active {
+  color: black;
+}
+
+/* flag icons for countries */
+.usa-flag, .uk-flag, .ussr-flag, .germany-flag, .japan-flag, #toggle-pic {
+  width: 0.9rem;
+  height: 0.9rem;
   object-fit: cover;
 }
+
+#toggle-pic {
+  background-color: black;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+#toggle-pic:hover {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+#toggle-div {
+  display: flex;
+}
+
+
 
 .usa-flag, .ussr-flag {
   object-position: 10% 0;
 }
 
+
+/* when screen is narrow and nav bar is toggled OFF  */
+#nav-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+
+}
+
+
+/* when screen is narrow and nav bar is toggled ON  */
+
+.show-links {
+  height: 15rem;
+}
+
+.show-links .navlink {
+  display: block;
+  padding: 0.5rem;
+}
+
+/* when screen is wide */
+@media screen and (min-width: 1100px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .show-links {
+    height: auto;
+  }
+
+  nav {
+    height: auto;
+  }
+
+  nav > ul {
+    height:100%;
+    display: flex;
+    align-items: center;
+  }
+
+  nav li {
+    display: inline;
+  }
+
+  #toggle-div {
+    display: none;
+  }
+}
+
+/*
+
+*/
+
+/*
+============================
+Shelf area on gun pages
+============================
+*/
+
+/* gun shelf and the guns on the shelf for country pages */
 #shelf {
   background-image: url('images/gun-wall.png');
   background-repeat: no-repeat;
@@ -34,9 +142,10 @@ ul {
 }
 
 .gun-on-shelf {
-  width: auto;
-  height: 40px;
+  width: 240px;
+  height: auto;
 }
+
 
 
 

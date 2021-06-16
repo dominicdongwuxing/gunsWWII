@@ -21,17 +21,8 @@ export default class {
             className = 'gun';
             this.country = path.substring(1,path.indexOf('-'));
         }
-        this.showNavbar(className);
 
-    }
-
-    // change the title when changing view
-    setTitle(title) {
-        document.title = title;
-    }
-
-    // only show display of the current section (class name = home/country/gun)
-    showNavbar(className) {
+        // only display divs that matches the className 
         Array.prototype.forEach.call(document.querySelectorAll(".home, .country, .gun"), element => {
             if (element.classList.contains(className)) {
                 element.style.display = "flex";
@@ -40,19 +31,51 @@ export default class {
             }
         })
 
+        // add toggle for nav bar
+        const toggleDiv = document.getElementById("toggle-div");
+        toggleDiv.innerHTML = "";
+        const toggle = document.createElement("button");
+        toggle.id = "toggle-button";
+        toggle.innerHTML = `
+            <img id="toggle-pic" src="images/down.png">
+        `;
+        toggle.addEventListener("click", () => {
+            const img = document.getElementById("toggle-pic");
+            console.log(img.src);
+            if (img.src.match(/images\/down\.png/)) {
+                img.src = "images/up.png";
+            } else {
+                img.src = "images/down.png";
+            }
+            const navbars = document.getElementsByTagName("nav");
+            for (let navbar of navbars) {
+                if (navbar.classList.contains(className)) {
+                    navbar.classList.toggle("show-links");
+                }
+            }
+        });
+        toggleDiv.appendChild(toggle);
+
+        // for gun pages, add backToCountry button
         if (className === 'gun') {
             const backToCountry = document.getElementById("navbar-gun").children[0].children[0];
             backToCountry.innerHTML = `
             <a href="/${this.country}" class="navlink" data-link><img class="${this.country}-flag" src="../../images/${this.country}/${this.country}.png" data-link></a>
             `;
         }
+
+    }
+
+    // change the title when changing view
+    setTitle(title) {
+        document.title = title;
     }
 
     // for countries pages
     showShelf(gunCollection) {
         const addLink = (gun) => {
             const img = document.createElement("img");
-            img.src = `../../../images/${this.country}/${gun}/profile.png`;
+            img.src = `../../images/${this.country}/${gun}/profile.png`;
             img.classList.add("gun-on-shelf");
             img.setAttribute("data-link","");
     
@@ -95,7 +118,5 @@ export default class {
                 });
             }
         } 
-    }
-
-    
+    }    
 }

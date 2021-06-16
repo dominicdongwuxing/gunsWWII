@@ -1,26 +1,40 @@
 // I followed this tutorial: https://www.youtube.com/watch?v=6BozpmSjk-Y 
-import home from "./views/home.js";
+
+// import homem page
+import home from "./home.js";
 // import country pages
-import usa from "./views/usa.js";
-import ussr from "./views/ussr.js";
-import germany from "./views/germany.js";
-import uk from "./views/uk.js";
-import japan from "./views/japan.js";
+import { usa, ussr, germany, uk, japan } from "./countries.js";
 // import gun pages
 // USA
-import m1garand from "./views/usa-m1garand.js";
-import thompson from "./views/usa-thompson.js";
-import m1911 from "./views/usa-m1911.js";
-//USSR
+import {
+    // USA
+    m1garand,
+    m1903springfield,
+    m1911,
+    thompson,
+    bar,
+    // USSR
+    mosinnagant,
+    svt40,
+    ppsh41,
+    dp28,
+    // Nazi Germany
+    kar98k,
+    sturmgewehr44,
+    gewehr43,
+    mp40,
+    mg42,
+    lugerp08,
+    // UK
+    leeenfield,
+    bren,
+    sten,
+    // Japan
+    type38,
+    type92,
+    type96
+} from "./guns.js"
 
-// Nazi Germany
-
-// UK
-import leeenfield from "./views/uk-leeenfield.js";
-import bren from "./views/uk-bren.js";
-import sten from "./views/uk-sten.js";
-
-// Japan
 
 const navigateTo = url  => {
     history.pushState(null, null, url);
@@ -42,15 +56,28 @@ const router = async () => {
         { path: "/usa-m1garand", view: m1garand },
         { path: "/usa-thompson", view: thompson },
         { path: "/usa-m1911", view: m1911 },
+        { path: "/usa-bar", view: bar },
+        { path: "/usa-m1903springfield", view: m1903springfield },
         //USSR
-
+        { path: "/ussr-mosinnagant", view: mosinnagant },
+        { path: "/ussr-svt40", view: svt40 },
+        { path: "/ussr-ppsh41", view: ppsh41 },
+        { path: "/ussr-dp28", view: dp28 },
         // Nazi Germany
-
+        { path: "/germany-kar98k", view: kar98k },
+        { path: "/germany-gewehr43", view: gewehr43 },
+        { path: "/germany-sturmgewehr44", view: sturmgewehr44 },
+        { path: "/germany-mp40", view: mp40 },
+        { path: "/germany-mg42", view: mg42 },
+        { path: "/germany-lugerp08", view: lugerp08 },
         // UK
         { path: "/uk-leeenfield", view: leeenfield },
         { path: "/uk-sten", view: sten },
         { path: "/uk-bren", view: bren },
         // Japan
+        { path: "/japan-type38", view: type38 },
+        { path: "/japan-type92", view: type92 },
+        { path: "/japan-type96", view: type96 }
     ];
 
     // test each route for potential match
@@ -62,6 +89,7 @@ const router = async () => {
     });
 
     let match = potentialMatches.find(potentialMatch => potentialMatch.isMatch);
+    
 
     if (!match){
         match = {

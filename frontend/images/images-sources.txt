@@ -1,5 +1,11 @@
 gun-wall.png
 https://www.gallowtech.com/package-pkg-h-41-04-2.aspx
+
+up.png
+https://www.pngaaa.com/download/92421
+
+down.png
+https://www.pngaaa.com/download/2573217
 ===================================================================================================================================================================================================
 usa/m1garand/profile.png
 https://guns.fandom.com/wiki/M1_Garand?file=M1Garand.jpg
