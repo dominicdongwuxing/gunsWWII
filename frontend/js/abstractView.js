@@ -25,13 +25,18 @@ export default class {
         // only display divs that matches the className 
         Array.prototype.forEach.call(document.querySelectorAll(".home, .country, .gun"), element => {
             if (element.classList.contains(className)) {
-                element.style.display = "flex";
+                element.style.display = "";
             } else {
                 element.style.display = "none";
             }
         })
 
+        const navbars = [...document.getElementsByTagName("nav")];
+        const navbar = navbars.filter(navbar => navbar.classList.contains(className))[0];
+        const header = document.getElementsByTagName("header")[0];
+
         // add toggle for nav bar
+        
         const toggleDiv = document.getElementById("toggle-div");
         toggleDiv.innerHTML = "";
         const toggle = document.createElement("button");
@@ -40,20 +45,67 @@ export default class {
             <img id="toggle-pic" src="images/down.png">
         `;
         toggle.addEventListener("click", () => {
+            // switch up and down toggle arrow
             const img = document.getElementById("toggle-pic");
             if (img.src.match(/images\/down\.png/)) {
                 img.src = "images/up.png";
             } else {
                 img.src = "images/down.png";
             }
-            const navbars = document.getElementsByTagName("nav");
-            for (let navbar of navbars) {
-                if (navbar.classList.contains(className)) {
-                    navbar.classList.toggle("show-links");
-                }
+            // navbar.classList.toggle("show-links");
+            // switch whether or not show the drop down list due to clicking
+            const listUnderNavHeight = navbar.firstElementChild.getBoundingClientRect().height;
+            let navbarHeight = navbar.getBoundingClientRect().height;
+            if (navbarHeight === 0) {
+                navbar.style.height = `${listUnderNavHeight}px`;
+            } else {
+                navbar.style.height = 0;
             }
         });
         toggleDiv.appendChild(toggle);
+
+        // keep the navbar on the top when scrolling down the page
+        window.addEventListener("scroll", () => {
+            const navbarHeight = navbar.getBoundingClientRect().height;
+            const scrollHeight = window.pageYOffset;
+            if (scrollHeight > navbarHeight) {
+                header.classList.add("fixed-header");
+            } else {
+                header.classList.remove("fixed-header");
+            }
+
+        })
+
+        // for gun pages add scrolling effect
+        Array.prototype.forEach.call(document.getElementsByClassName("scrolllink"), link => {
+            link.addEventListener("click", e => {
+                e.preventDefault();
+                // nagivate to specific spot
+                let id = e.currentTarget.href;
+                id = id.slice(id.indexOf("#")+1);
+                const element = document.getElementById(id);
+                const navHeight = navbar.getBoundingClientRect().height;
+                const headerHeight = header.getBoundingClientRect().height;
+                const fixedHeader = header.classList.contains("fixed-header");
+                let position = element.offsetTop - headerHeight;
+                // if header is not fixed (static on the top) then substract its height again
+                if (!fixedHeader) {
+                    position -= headerHeight;
+                }
+
+                // if the list is dropped down then scroll back the navHeight
+                if (navHeight > document.querySelector(".navlink").getBoundingClientRect().height) {
+                    position += navHeight;
+                    // close the drop down list after scrolling
+                    toggle.dispatchEvent(new Event("click"));
+                }
+                window.scrollTo({
+                    left:0, 
+                    top:position,
+                });
+                
+            })
+        })
 
         // for gun pages, add backToCountry button
         if (className === 'gun') {
