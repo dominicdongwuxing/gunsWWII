@@ -10,6 +10,7 @@
 button {
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 /*
@@ -27,6 +28,8 @@ header {
   color: white;
   font-size: 1.2rem;
   padding: 0.5rem;
+  /*make the links inside the li and also home link as block */
+  display: block;
 }
 
 .navlink:hover {
@@ -45,6 +48,10 @@ header {
   object-fit: cover;
 }
 
+.usa-flag, .ussr-flag {
+  object-position: 10% 0;
+}
+
 #toggle-pic {
   background-color: black;
   width: 1.4rem;
@@ -60,13 +67,6 @@ header {
   display: flex;
 }
 
-
-
-.usa-flag, .ussr-flag {
-  object-position: 10% 0;
-}
-
-
 /* when screen is narrow and nav bar is toggled OFF  */
 #nav-header {
   display: flex;
@@ -77,19 +77,17 @@ nav {
   height: 0;
   overflow: hidden;
   transition: all 0.3s;
-
 }
-
 
 /* when screen is narrow and nav bar is toggled ON  */
 
 .show-links {
-  height: 15rem;
+  height: 12rem;
 }
 
-.show-links .navlink {
-  display: block;
-  padding: 0.5rem;
+/* make the whole list occupy whole width of nav*/
+.show-links ul {
+  width: 100%;
 }
 
 /* when screen is wide */
@@ -99,24 +97,33 @@ nav {
     justify-content: space-between;
   }
 
+  /* if toggle is ON when screen is wide (nav still has .show-links class)*/
   .show-links {
     height: auto;
   }
 
+  /* make nav appear in wide screen (oppose to height=0 above)*/
   nav {
     height: auto;
   }
 
+  /* make the ul list inside the nav as flex, and center the li children*/
   nav > ul {
     height:100%;
     display: flex;
     align-items: center;
   }
 
+  /* make all li the same line*/
   nav li {
     display: inline;
   }
 
+  /* .navlink {
+    height: auto;
+  } */
+
+  /* make the toggle button disappear */
   #toggle-div {
     display: none;
   }

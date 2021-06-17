@@ -41,7 +41,6 @@ export default class {
         `;
         toggle.addEventListener("click", () => {
             const img = document.getElementById("toggle-pic");
-            console.log(img.src);
             if (img.src.match(/images\/down\.png/)) {
                 img.src = "images/up.png";
             } else {
