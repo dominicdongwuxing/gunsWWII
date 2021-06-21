@@ -122,9 +122,6 @@ nav ul {
   left: 0;
   width: 100%;
 } 
-/*
-
-*/
 
 /*
 ============================
@@ -133,17 +130,42 @@ Shelf area on gun pages
 */
 
 /* gun shelf and the guns on the shelf for country pages */
+#shelf-area {
+  width:400px;
+  margin: auto;
+  padding-top: 1rem;
+}
+
+#gun-type-btns {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ecede6;
+  border-radius: 5rem;
+}
+
+#gun-type-btns button {
+  border-radius: 5rem;
+  padding: 0.5rem;
+}
+
+#gun-type-btns button:hover { 
+  background-color:#a0a19c;  
+}
+
+#gun-type-btns .active { 
+  background-color:#a0a19c;  
+}
+
 #shelf {
   background-image: url('images/gun-wall.png');
   background-repeat: no-repeat;
   background-size: cover;
-  width: 500px;
-  height: 300px;
+  width: 400px;
 }
 
 .gun-on-shelf {
-  width: 240px;
-  height: auto;
+  width: 300px;
+  padding: 5px;
 }
 
 

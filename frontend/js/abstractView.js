@@ -150,24 +150,30 @@ export default class {
         // set up tab function to select gun type
         const changeGunTypeButtons = document.getElementById("gun-type-btns").children;
         for (let button of changeGunTypeButtons) {
-            let gunType = button.id.split('-')[1];
-            if (Object.keys(gunCollection).includes(gunType)) {
-                button.addEventListener("click", () => {
-                    shelf.innerHTML = "";
+            let gunType = button.id.split('-')[1];            
+            button.addEventListener("click", () => {
+                // display correct guns on the shelf
+                shelf.innerHTML = "";
+                if (Object.keys(gunCollection).includes(gunType)) { // this is a particular gun type
                     for (let gun of gunCollection[gunType]){
                         addLink(gun);
                     }
-                });
-            } else {
-                button.addEventListener("click", () => {
-                    shelf.innerHTML = "";
+                } else { // this is the All button
                     for (let [gunType, guns] of Object.entries(gunCollection)){
                         for (let gun of guns){
                         addLink(gun);
                         }
                     }
-                });
-            }
+                }  
+                // change style of the button
+                for (let btn of changeGunTypeButtons) {
+                    if (btn.classList.contains("active")) {
+                        btn.classList.remove("active");
+                    }
+                } 
+                button.classList.add("active");
+            });
         } 
     }    
 }
+
