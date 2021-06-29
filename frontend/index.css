@@ -125,7 +125,7 @@ nav ul {
 
 /*
 ============================
-Shelf area on gun pages
+Shelf area on countries pages
 ============================
 */
 
@@ -158,14 +158,13 @@ Shelf area on gun pages
 
 #shelf {
   background-image: url('images/gun-wall.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-repeat: no-repeat; */
   width: 400px;
 }
 
 .gun-on-shelf {
-  width: 300px;
-  padding: 5px;
+  /* width: 300px; */
+  padding: 10px;
 }
 
 
